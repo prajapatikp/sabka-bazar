@@ -1,0 +1,130 @@
+.cart {
+    background: #ededed;
+    display: inline-block;
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    &__empty {
+        text-align: center;
+        &-text {
+
+        }
+        &-shopping {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #d00256;
+            color: white;
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 20px;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+    }
+
+    &-header {
+
+        background-color: white;
+
+        h3 {
+            padding: 12px 25px;
+            border-bottom: 1px solid #e5e3e3;
+            border-top: 1px solid #e5e3e3;
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+        }
+    }
+
+    &__offer {
+        background: white;
+        border-top: solid 1px #d8d8d8;
+        margin: 20px 0px;
+        padding: 16px;
+
+        label {
+            margin-left: 24px;
+        }
+    }
+
+    &__footer {
+        background: white;
+        border-top: solid 1px #d8d8d8;
+        padding: 10px;
+        text-align: center;
+
+        &-text {}
+
+        &-checkout {
+            padding: 16px;
+            background: #d00255;
+            color: white;
+            border-radius: 5px;
+            margin: 10px auto;
+            max-width: 300px;
+            text-align: left;
+
+            &-text {}
+
+            &-price {
+                float: right;
+            }
+        }
+    }
+
+    &__item {
+
+        &__product {
+            margin: auto 5px;
+
+            &-name {
+                font-weight: bold;
+            }
+
+            &-count {
+                margin: 0px 10px;
+            }
+
+            &-price {
+                margin-left: 10px;
+            }
+
+            &-decreament {
+                margin-top: 5px;
+            }
+
+            button {
+                margin-top: 5px;
+                background: #d00256;
+                border: none;
+                color: white;
+                border-radius: 2px;
+            }
+        }
+
+        &-totalprice {
+            align-self: center;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+
+        background-color: white;
+        border-bottom: 1px solid #e5e3e3;
+        border-top: 1px solid #e5e3e3;
+        display: flex;
+
+        &-image {
+            height: 55px;
+            width: 55px;
+            margin: 12px;
+        }
+    }
+}

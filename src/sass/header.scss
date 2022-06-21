@@ -1,0 +1,80 @@
+.header {
+    box-shadow: 0 6px 4px rgb(0 0 0 / 20%);
+    
+    button:hover {
+        cursor: pointer;
+    }
+
+    &__content {
+        max-width: 1024px;
+        margin: auto;
+        display: flex;
+        padding: 0px 10px;
+
+        img {
+            padding: 10px;
+            height: 90px;
+        }
+
+        &__menues {
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            &-left {
+                height: 20px;
+                position: absolute;
+                bottom: 10px;
+                margin-left: 80px;
+
+                &-home, &-product {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: gray;
+                    border: none;
+                    margin-left: 10px;
+                    text-decoration: none;
+                    background: white;
+                }
+            }
+
+            &-right {
+                float: right;
+                margin-left: auto;
+
+                &-signing {
+                    width: 100%;
+                    text-align: right;
+
+                    &-in, &-register {
+                        font-size: 12px;
+                        color: gray;
+                        border: none;
+                        background: white;
+                        text-decoration: none;
+                        padding: 0px;
+                        margin-left: 8px;
+                    }
+                }
+
+                &-cart {
+                    margin-top: 8px;
+                    display: flex;
+                    padding: 16px;
+                    background-color: #ededed;
+
+                    img {
+                        height: 27px;
+                        width: 27px;
+                        padding: 0px;
+                        fill: red;
+                    }
+
+                    label {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
