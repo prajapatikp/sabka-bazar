@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../sass/home.scss'
+import ImageSlider from "react-simple-image-slider";
 
 const Home = () => {
     const [categories, setCategories] = useState([])
@@ -48,8 +49,25 @@ const Home = () => {
         return arr;
     }
 
+    const images = [
+        { url: "/images/offers/offer1.jpg" },
+        { url: "/images/offers/offer2.jpg" },
+        { url: "/images/offers/offer3.jpg" },
+        { url: "/images/offers/offer4.jpg" },
+        { url: "/images/offers/offer5.jpg" },
+    ];
+
     return (
         <>
+            <div className="carosel">
+                <ImageSlider
+                    autoPlay={true}
+                    width={1024}
+                    height={250}
+                    images={images}
+                    showBullets={true}
+                    showNavs={true} />
+            </div>
             <ul className="categories">
                 {getProductCategories()}
             </ul>
