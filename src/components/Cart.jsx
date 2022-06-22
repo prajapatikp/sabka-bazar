@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../sass/cart.scss'
 
 const Cart = () => {
-    const [cart, setCart] = useState([{},{}])
+    const [cart, setCart] = useState([{}])
     return (
         <>
             {cart.length > 0 && <div className="cart">

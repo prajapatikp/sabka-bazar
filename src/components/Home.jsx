@@ -4,9 +4,16 @@ import ImageSlider from "react-simple-image-slider";
 
 const Home = () => {
     const [categories, setCategories] = useState([])
+    const images = [
+        { url: "/images/offers/offer1.jpg" },
+        { url: "/images/offers/offer2.jpg" },
+        { url: "/images/offers/offer3.jpg" },
+        { url: "/images/offers/offer4.jpg" },
+        { url: "/images/offers/offer5.jpg" },
+    ];
 
     useEffect(() => {
-        fetch("/categories.json").then((response) => {
+        fetch("/response-json/categories.json").then((response) => {
             return response.json();
         }).then((data) => {
             setCategories(data)
@@ -19,13 +26,13 @@ const Home = () => {
         categories.forEach(category => {
             if (imageLeft) {
                 arr.push(
-                    <li>
-                        <div className="categories__item">
-                            <img className="categories__item-image" src={category.image}></img>
+                    <li key={category.type}>
+                        <div aria-level={category.name} tabIndex={0} className="categories__item">
+                            <img alt={category.name} className="categories__item-image" src={category.image}></img>
                             <div className="categories__item-right">
                                 <h4 className="categories__item-name">{category.name}</h4>
                                 <label className="categories__item-description">{category.description}</label>
-                                <br /><button className="categories__item-button" type="submit">{category.buttontext}</button>
+                                <br /><button tabIndex={0} className="categories__item-button" type="submit">{category.buttontext}</button>
                             </div>
                         </div>
                     </li>
@@ -33,13 +40,13 @@ const Home = () => {
             } else {
                 arr.push(
                     <li>
-                        <div className="categories__item">
+                        <div aria-level={category.name} tabIndex={0} className="categories__item">
                             <div className="categories__item-right">
                                 <h4 className="categories__item-name">{category.name}</h4>
                                 <label className="categories__item-description">{category.description}</label>
-                                <br /><button className="categories__item-button" type="submit">{category.buttontext}</button>
+                                <br /><button tabIndex={0} className="categories__item-button" type="submit">{category.buttontext}</button>
                             </div>
-                            <img className="categories__item-image" src={category.image}></img>
+                            <img alt={category.name} className="categories__item-image" src={category.image}></img>
                         </div>
                     </li>
                 )
@@ -48,14 +55,6 @@ const Home = () => {
         });
         return arr;
     }
-
-    const images = [
-        { url: "/images/offers/offer1.jpg" },
-        { url: "/images/offers/offer2.jpg" },
-        { url: "/images/offers/offer3.jpg" },
-        { url: "/images/offers/offer4.jpg" },
-        { url: "/images/offers/offer5.jpg" },
-    ];
 
     return (
         <>
@@ -68,7 +67,7 @@ const Home = () => {
                     showBullets={true}
                     showNavs={true} />
             </div>
-            <ul className="categories">
+            <ul aria-label="categories list" className="categories">
                 {getProductCategories()}
             </ul>
         </>
