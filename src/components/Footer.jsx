@@ -3,7 +3,7 @@ import '../sass/footer.scss'
 
 const Footer = () => {
     return (
-        <footer className='footer'>
+        <footer className='footer' aria-label="footer">
             Copyright © 2011-2018 Sabka Bazar Grocery Supplies Pvt Ltd
         </footer>
     )

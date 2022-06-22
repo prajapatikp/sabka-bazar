@@ -1,5 +1,6 @@
 {
   "name": "sabka-bazar",
+  "description": "This is practice web ecommerce site called sabka bazar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
